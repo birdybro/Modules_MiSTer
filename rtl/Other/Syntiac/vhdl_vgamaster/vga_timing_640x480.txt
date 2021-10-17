@@ -1,0 +1,9 @@
+-- Setup 640x480@60hz needs pixel clock of ~25 Mhz
+	hSyncPol => '0',
+	vSyncPol => '0',
+	xSize => to_unsigned(800, 12),
+	ySize => to_unsigned(525, 12),
+	xSyncFr => to_unsigned(656, 12), -- Sync pulse 96
+	xSyncTo => to_unsigned(752, 12),
+	ySyncFr => to_unsigned(500, 12), -- Sync pulse 2
+	ySyncTo => to_unsigned(502, 12)
