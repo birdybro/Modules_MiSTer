@@ -1,0 +1,14 @@
+
+State Machine - |PDP8L|CpuX8:CPU1|st
+Name st.D5 st.D4 st.D3 st.D2 st.D1 st.D0 st.S4 st.S3 st.S2 st.S1 st.S0 
+st.S0 0 0 0 0 0 0 0 0 0 0 0 
+st.S1 0 0 0 0 0 0 0 0 0 1 1 
+st.S2 0 0 0 0 0 0 0 0 1 0 1 
+st.S3 0 0 0 0 0 0 0 1 0 0 1 
+st.S4 0 0 0 0 0 0 1 0 0 0 1 
+st.D0 0 0 0 0 0 1 0 0 0 0 1 
+st.D1 0 0 0 0 1 0 0 0 0 0 1 
+st.D2 0 0 0 1 0 0 0 0 0 0 1 
+st.D3 0 0 1 0 0 0 0 0 0 0 1 
+st.D4 0 1 0 0 0 0 0 0 0 0 1 
+st.D5 1 0 0 0 0 0 0 0 0 0 1 

@@ -1,0 +1,22 @@
+
+State Machine - |sys|cpu:cpu_1|state
+Name state.cpu_off state.irq_rd_vct_p2 state.rd_code_p1 state.irq_pushsr state.irq_pushpc state.irq_init state.doi_rdwr_dst state.doi_rd_dstbs state.doi_rd_src state.doi_rd_srcbs state.reti_poppc state.reti_popsr_p2 state.reti_popsr_p1 state.push_rdwr state.push_rd_bs state.soi_rdwr_op state.soi_rd_bs state.rd_code_p2 state.irq_rd_vct_p1 
+state.irq_rd_vct_p1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.rd_code_p2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.soi_rd_bs 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.soi_rdwr_op 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.push_rd_bs 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.push_rdwr 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.reti_popsr_p1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.reti_popsr_p2 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.reti_poppc 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.doi_rd_srcbs 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.doi_rd_src 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.doi_rd_dstbs 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.doi_rdwr_dst 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.irq_init 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.irq_pushpc 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.irq_pushsr 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.rd_code_p1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.irq_rd_vct_p2 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.cpu_off 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 

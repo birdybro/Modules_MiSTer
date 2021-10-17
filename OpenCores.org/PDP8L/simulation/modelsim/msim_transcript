@@ -1,0 +1,56 @@
+# Reading C:/altera/11.0/modelsim_ase/tcl/vsim/pref.tcl 
+# do PDP8L_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying C:\altera\11.0\modelsim_ase\win32aloem/../modelsim.ini
+# 
+# vcom -93 -work work {c:/PDP8L/Top.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Compiling entity pdp8l
+# -- Compiling architecture only of pdp8l
+# vcom -93 -work work {c:/PDP8L/MegaRam.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity megaram
+# -- Compiling architecture syn of megaram
+# vcom -93 -work work {c:/PDP8L/Divider.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity divider
+# -- Compiling architecture rtl of divider
+# vcom -93 -work work {c:/PDP8L/DF32.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity df32
+# -- Compiling architecture syn of df32
+# vcom -93 -work work {c:/PDP8L/Cpu.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity cpux8
+# -- Compiling architecture behavioral of cpux8
+# vcom -93 -work work {c:/PDP8L/uart.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity uart
+# -- Compiling architecture rtl of uart
+# 
+# Loading project Sim1

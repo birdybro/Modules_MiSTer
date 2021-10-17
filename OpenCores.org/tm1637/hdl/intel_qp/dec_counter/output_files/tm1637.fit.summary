@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sat Mar 13 16:23:59 2021
+Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Revision Name : tm1637
+Top-level Entity Name : tm1637_toplevel
+Family : Cyclone IV E
+Device : EP4CE6E22C8
+Timing Models : Final
+Total logic elements : 347 / 6,272 ( 6 % )
+    Total combinational functions : 332 / 6,272 ( 5 % )
+    Dedicated logic registers : 97 / 6,272 ( 2 % )
+Total registers : 97
+Total pins : 3 / 92 ( 3 % )
+Total virtual pins : 0
+Total memory bits : 0 / 276,480 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

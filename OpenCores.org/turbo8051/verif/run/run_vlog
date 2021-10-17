@@ -1,0 +1,92 @@
+#!/bin/csh -f
+#
+# test all programs with ethernet controler
+#
+  
+  
+set COV   = "1"
+set failedi = 0;
+set failedx = 0;
+set all_testsi = 0;
+set all_testsx = 0;
+
+set internal_tests=(uart_test_1)
+
+
+echo " Compiling with cadence tools - irun "
+
+if (${COV} == 0) then 
+     set VERILOG     = "irun -64bit -sv -elaborate +access+rcw +nospecify +define+SFLASH_SDPUP -V93 -define S75"
+     set ELAB        = "irun -64bit -R +access+rcw"
+     echo " Compiling with IES without coverage"
+ else
+     set VERILOG     = "irun  -64bit -sv -elaborate +access+rcw +define+SFLASH_SDPUP +nospecify -V93 -define S75 -covfile cov_options.ccf -covoverwrite"
+     set ELAB        = "irun -64bit -R +access+rcw -covfile cov_options.ccf -covoverwrite"
+     echo " Compiling with IES with coverage"
+
+ endif
+
+
+$VERILOG -f filelist_top.f -l ../log/complie.log
+
+
+if ($status != 0) then
+  echo "#### Compile : FAILED"
+  echo ""
+  cat ../log/complie.log
+  exit
+else
+  echo "#### Compile : PASSED"
+endif
+
+
+echo ""
+echo "###########################################"
+echo " Runing test programs "
+echo "###########################################"
+
+set i = 0;
+        echo "###########################################"
+foreach internal_test ($internal_tests)
+	@ i += 1;
+	#echo ""
+	#echo "### Running test ${i}: ${internal_test}"
+
+        $ELAB +DUMP +${internal_test} -l ../log/run.log
+	if ($status != 0) then
+	  cat ../log/run.log
+	  exit
+	else if (`tail -100 ../log/run.log | grep PASSED` == "") then
+	  echo "### test ${i}: ${internal_test} --> FAILED"
+          @ failedi += 1;
+          @ all_testsi += 1;
+        else
+	  echo "### test ${i}: ${internal_test} --> PASSED"
+          @ all_testsi += 1;
+	endif
+  
+        mv ../log/run.log ../log/${internal_test}.log
+
+
+end
+    echo "###########################################"
+
+
+set i = 0;
+echo ""
+echo "###########################################"
+echo "###  Test Logs                            "
+foreach internal_test ($internal_tests)
+	  @ i += 1;
+	  echo "   test ${i}: ../log/${internal_test}.log"
+
+end
+    echo "###########################################"
+
+echo ""
+echo "###########################################"
+echo "###  Test Summary                          "
+echo "### "
+echo "### Failed $failedi of $all_testsi internal tests"
+echo "###########################################"
+

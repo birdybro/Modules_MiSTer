@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sun May 26 22:30:43 2013
+Quartus II Version : 11.0 Build 157 04/27/2011 SJ Web Edition
+Revision Name : PDP8L
+Top-level Entity Name : PDP8L
+Family : Cyclone III
+Device : EP3C25F324C6
+Timing Models : Final
+Total logic elements : 1,044 / 24,624 ( 4 % )
+    Total combinational functions : 978 / 24,624 ( 4 % )
+    Dedicated logic registers : 420 / 24,624 ( 2 % )
+Total registers : 420
+Total pins : 8 / 216 ( 4 % )
+Total virtual pins : 0
+Total memory bits : 442,368 / 608,256 ( 73 % )
+Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

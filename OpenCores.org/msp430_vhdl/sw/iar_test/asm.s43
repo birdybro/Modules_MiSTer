@@ -1,0 +1,194 @@
+#include "msp430.h"                     ; #define controlled include file
+
+        NAME    main                    ; module name
+
+        PUBLIC  main                    ; make the main label vissible
+                                        ; outside this module
+        ORG     0FFFEh
+        DC16    init                    ; set reset vector to 'init' label
+
+ //       RSEG    CSTACK                  ; pre-declaration of segment
+   //     ORG     0f100h
+    //    RSEG    0e000h                    ; place program in 'CODE' segment
+        ORG     0E000h
+
+
+/*
+init:   MOV     #SFE(CSTACK), SP        ; set up stack
+
+main:   NOP                             ; main program
+        MOV.W   #WDTPW+WDTHOLD,&WDTCTL  ; Stop watchdog timer
+        JMP $                           ; jump to current location '$'
+                                        ; (endless loop)
+        END
+*/
+
+init:
+main:
+//       MOV     #SFE(CSTACK), SP        ; set up stack
+
+//        mov #0a00h, SP
+
+        mov #0h, r4
+        mov #0, 0(r4)
+        mov #1000, r5
+        mov #4000, r6
+
+loop2:
+//        jmp loop2
+ 
+        dec r5
+        jnz loop2
+        mov #1000, r5
+        
+        dec r6
+        jnz loop2
+        mov #4000, r6
+        
+        add #1, 0(r4)
+        jmp loop2
+
+
+
+        mov #1h, r5
+        mov #2h, r6
+        mov #3h, r7
+        mov #4h, r8
+        mov #5h, r9
+        mov #6h, r10
+        mov #7h, r11
+        mov #8h, r12
+        mov #9h, r13
+        mov #0ah, r14
+        mov #0bh, r15
+
+loop1: 
+
+        add #1, r4
+        add #2, r5
+        add #3, r6
+        add #4, r7
+        add #5, r8
+        add #6, r9
+        add #7, r10
+        add #8, r11
+        add #9, r12
+        add #0ah, r13
+        add #0bh, r14
+        add #0ch, r15
+
+        jmp loop1
+
+        mov #1, r4
+        mov @r4, r5
+
+        mov #1, r4
+        mov #5678h, 0(r4)
+
+        add #1, SR
+        sub #1, SR
+
+        push 0(SP)
+        push 0(SP)
+        push 0(SP)
+        push 0(SP)
+
+        push #1234
+        push #5678
+
+        swpb @r4
+        swpb @SP
+        swpb @SP
+        swpb @SP+
+        swpb @SP+
+        swpb @SP+
+
+        push 0(SP)
+        push 0(SP)
+        push 0(SP)
+        mov #0abcdh, 0(r4)
+        push 0(SP)
+        mov #1234h, 0(r4)
+        push 0(SP)
+
+
+        mov #1234h, 0(r4)
+        push @SP+
+        push @SP+
+        mov #0abcdh, 0(r4)
+        push @SP+
+        mov #1234h, 0(r4)
+        push @SP
+        push @SP+
+        pop SP
+        push SP
+        pop SP
+        push SP
+        pop SP
+        push SP
+        pop SP
+        
+
+
+        call #1116h
+ 
+        mov #0, R4
+        mov #1, R4
+        mov #2, R4
+        mov #3, R4
+        ret
+        
+        push PC
+        mov #0, R4
+        mov #1, R4
+        mov #2, R4
+        mov #3, R4
+       ret
+        
+        mov #0, R4
+        mov #1, 0(R4)
+        mov #0, R4
+        add @R4+, R4
+
+        mov #2, R4
+        mov #2, 0(R4)
+        mov #0, R4
+        add @R4+, 0(R4)
+
+        mov @R4+, 0(R4)
+        mov @R4+, 0(R4)
+        mov @R4+, 0(R4)
+        mov @R4+, 0(R4)
+        mov @R4+, 0(R4)
+        rrc @R4+
+
+
+
+/*
+//       mov PC, 0(R4)
+//       mov SR, 0(R4)
+//       add PC, 0(R4)
+       add #2, PC
+       add #2, PC
+       add #2, PC
+       add #2, PC
+       add #0, PC
+       add #0, PC
+/*
+       cmp R3, 0(R3)
+       cmp @R3, 0(R3)
+       cmp #1, 0(R3)
+//       rrc @R2
+//       rrc R3
+//       push.b @R3+
+//        add @R3+, 0(R3)
+//        call @R3+
+        bit #0h, 0(R3)
+        bit #1h, 0(R3)
+        bit #0FFFEh, 0(R3)
+        bit #0FFFFh, 0(R3)
+*/        
+loop:
+        jmp loop
+        
+        END

@@ -1,0 +1,240 @@
+###############################################################################
+#                                                                             #
+#     IAR Assembler V4.21.8.50079/W32  for MSP430 04/Mar/2010  19:01:31       #
+#     Copyright (C) 1996-2009 IAR Systems AB.                                 #
+#                                                                             #
+#           Target option =  MSP430                                           #
+#           Source file   =  D:\projects\cpu\sw\iar_test\asm.s43              #
+#           List file     =  D:\projects\cpu\sw\iar_test\Debug\List\asm.lst   #
+#           Object file   =  D:\projects\cpu\sw\iar_test\Debug\Obj\asm.r43    #
+#           Command line  =  D:\projects\cpu\sw\iar_test\asm.s43              #
+#                            -OD:\projects\cpu\sw\iar_test\Debug\Obj\ -s+     #
+#                            -M<> -w+                                         #
+#                            -LD:\projects\cpu\sw\iar_test\Debug\List\ -t8    #
+#                            -r -D__MSP430F149__                              #
+#                            -IC:\Applications\iar_msp430\430\INC\            #
+#                                                                             #
+###############################################################################
+
+      1    00FFFE              #include "msp430.h"                     ;
+                                #define controlled include file
+      2    00FFFE              
+      3    00FFFE                      NAME    main                    ; module
+                                name
+      4    00FFFE              
+      5    000000                      PUBLIC  main                    ; make
+                                                                        the
+                                                                        main
+                                                                        label
+                                                                        vissibl
+                                                                       e
+      6    00FFFE                                                      ;
+                                outside this module
+      7    00FFFE                      ORG     0FFFEh
+      8    00FFFE 00E0                 DC16    init                    ; set
+                                                 reset vector to 'init'
+                                                 label
+      9    010000              
+     10    010000               //       RSEG    CSTACK                  ;
+                                pre-declaration of segment
+     11    010000                 //     ORG     0f100h
+     12    010000                  //    RSEG    0e000h                    ;
+                                place program in 'CODE' segment
+     13    00E000                      ORG     0E000h
+     14    00E000              
+     15    00E000              
+     16    00E000              /*
+     17    00E000              init:   MOV     #SFE(CSTACK), SP        ; set up
+                                stack
+     18    00E000              
+     19    00E000              main:   NOP                             ; main
+                                program
+     20    00E000                      MOV.W   #WDTPW+WDTHOLD,&WDTCTL  ; Stop
+                                watchdog timer
+     21    00E000                      JMP $                           ; jump
+                                to current location '$'
+     22    00E000                                                      ;
+                                (endless loop)
+     23    00E000                      END
+     24    00E000              */
+     25    00E000              
+     26    00E000              init:
+     27    00E000              main:
+     28    00E000              //       MOV     #SFE(CSTACK), SP        ; set
+                                up stack
+     29    00E000              
+     30    00E000              //        mov #0a00h, SP
+     31    00E000              
+     32    00E000 0443                 mov #0h, r4
+     33    00E002 84430000             mov #0, 0(r4)
+     34    00E006 3540E803             mov #1000, r5
+     35    00E00A 3640A00F             mov #4000, r6
+     36    00E00E              
+     37    00E00E              loop2:
+     38    00E00E              //        jmp loop2
+     39    00E00E               
+     40    00E00E 1583                 dec r5
+     41    00E010 FE23                 jnz loop2
+     42    00E012 3540E803             mov #1000, r5
+     43    00E016                      
+     44    00E016 1683                 dec r6
+     45    00E018 FA23                 jnz loop2
+     46    00E01A 3640A00F             mov #4000, r6
+     47    00E01E                      
+     48    00E01E 94530000             add #1, 0(r4)
+     49    00E022 F53F                 jmp loop2
+     50    00E024              
+     51    00E024              
+     52    00E024              
+     53    00E024 1543                 mov #1h, r5
+     54    00E026 2643                 mov #2h, r6
+     55    00E028 37400300             mov #3h, r7
+     56    00E02C 2842                 mov #4h, r8
+     57    00E02E 39400500             mov #5h, r9
+     58    00E032 3A400600             mov #6h, r10
+     59    00E036 3B400700             mov #7h, r11
+     60    00E03A 3C42                 mov #8h, r12
+     61    00E03C 3D400900             mov #9h, r13
+     62    00E040 3E400A00             mov #0ah, r14
+     63    00E044 3F400B00             mov #0bh, r15
+     64    00E048              
+     65    00E048              loop1: 
+     66    00E048              
+     67    00E048 1453                 add #1, r4
+     68    00E04A 2553                 add #2, r5
+     69    00E04C 36500300             add #3, r6
+     70    00E050 2752                 add #4, r7
+     71    00E052 38500500             add #5, r8
+     72    00E056 39500600             add #6, r9
+     73    00E05A 3A500700             add #7, r10
+     74    00E05E 3B52                 add #8, r11
+     75    00E060 3C500900             add #9, r12
+     76    00E064 3D500A00             add #0ah, r13
+     77    00E068 3E500B00             add #0bh, r14
+     78    00E06C 3F500C00             add #0ch, r15
+     79    00E070              
+     80    00E070 EB3F                 jmp loop1
+     81    00E072              
+     82    00E072 1443                 mov #1, r4
+     83    00E074 2544                 mov @r4, r5
+     84    00E076              
+     85    00E076 1443                 mov #1, r4
+     86    00E078 B44078560000         mov #5678h, 0(r4)
+     87    00E07E              
+     88    00E07E 1253                 add #1, SR
+     89    00E080 1283                 sub #1, SR
+     90    00E082              
+     91    00E082 2112                 push 0(SP)
+     92    00E084 2112                 push 0(SP)
+     93    00E086 2112                 push 0(SP)
+     94    00E088 2112                 push 0(SP)
+     95    00E08A              
+     96    00E08A 3012D204             push #1234
+     97    00E08E 30122E16             push #5678
+     98    00E092              
+     99    00E092 A410                 swpb @r4
+    100    00E094 A110                 swpb @SP
+    101    00E096 A110                 swpb @SP
+    102    00E098 B110                 swpb @SP+
+    103    00E09A B110                 swpb @SP+
+    104    00E09C B110                 swpb @SP+
+    105    00E09E              
+    106    00E09E 2112                 push 0(SP)
+    107    00E0A0 2112                 push 0(SP)
+    108    00E0A2 2112                 push 0(SP)
+    109    00E0A4 B440CDAB0000         mov #0abcdh, 0(r4)
+    110    00E0AA 2112                 push 0(SP)
+    111    00E0AC B44034120000         mov #1234h, 0(r4)
+    112    00E0B2 2112                 push 0(SP)
+    113    00E0B4              
+    114    00E0B4              
+    115    00E0B4 B44034120000         mov #1234h, 0(r4)
+    116    00E0BA 3112                 push @SP+
+    117    00E0BC 3112                 push @SP+
+    118    00E0BE B440CDAB0000         mov #0abcdh, 0(r4)
+    119    00E0C4 3112                 push @SP+
+    120    00E0C6 B44034120000         mov #1234h, 0(r4)
+    121    00E0CC 2112                 push @SP
+    122    00E0CE 3112                 push @SP+
+    123    00E0D0 3141                 pop SP
+    124    00E0D2 0112                 push SP
+    125    00E0D4 3141                 pop SP
+    126    00E0D6 0112                 push SP
+    127    00E0D8 3141                 pop SP
+    128    00E0DA 0112                 push SP
+    129    00E0DC 3141                 pop SP
+    130    00E0DE                      
+    131    00E0DE              
+    132    00E0DE              
+    133    00E0DE B0121611             call #1116h
+    134    00E0E2               
+    135    00E0E2 0443                 mov #0, R4
+    136    00E0E4 1443                 mov #1, R4
+    137    00E0E6 2443                 mov #2, R4
+    138    00E0E8 34400300             mov #3, R4
+    139    00E0EC 3041                 ret
+    140    00E0EE                      
+    141    00E0EE 0012                 push PC
+    142    00E0F0 0443                 mov #0, R4
+    143    00E0F2 1443                 mov #1, R4
+    144    00E0F4 2443                 mov #2, R4
+    145    00E0F6 34400300             mov #3, R4
+    146    00E0FA 3041                ret
+    147    00E0FC                      
+    148    00E0FC 0443                 mov #0, R4
+    149    00E0FE 94430000             mov #1, 0(R4)
+    150    00E102 0443                 mov #0, R4
+    151    00E104 3454                 add @R4+, R4
+    152    00E106              
+    153    00E106 2443                 mov #2, R4
+    154    00E108 A4430000             mov #2, 0(R4)
+    155    00E10C 0443                 mov #0, R4
+    156    00E10E B4540000             add @R4+, 0(R4)
+    157    00E112              
+    158    00E112 B4440000             mov @R4+, 0(R4)
+    159    00E116 B4440000             mov @R4+, 0(R4)
+    160    00E11A B4440000             mov @R4+, 0(R4)
+    161    00E11E B4440000             mov @R4+, 0(R4)
+    162    00E122 B4440000             mov @R4+, 0(R4)
+    163    00E126 3410                 rrc @R4+
+    164    00E128              
+    165    00E128              
+    166    00E128              
+    167    00E128              /*
+    168    00E128              //       mov PC, 0(R4)
+    169    00E128              //       mov SR, 0(R4)
+    170    00E128              //       add PC, 0(R4)
+    171    00E128                     add #2, PC
+    172    00E128                     add #2, PC
+    173    00E128                     add #2, PC
+    174    00E128                     add #2, PC
+    175    00E128                     add #0, PC
+    176    00E128                     add #0, PC
+    177    00E128              /*
+    178    00E128                     cmp R3, 0(R3)
+    179    00E128                     cmp @R3, 0(R3)
+    180    00E128                     cmp #1, 0(R3)
+    181    00E128              //       rrc @R2
+    182    00E128              //       rrc R3
+    183    00E128              //       push.b @R3+
+    184    00E128              //        add @R3+, 0(R3)
+    185    00E128              //        call @R3+
+    186    00E128                      bit #0h, 0(R3)
+    187    00E128                      bit #1h, 0(R3)
+    188    00E128                      bit #0FFFEh, 0(R3)
+    189    00E128                      bit #0FFFFh, 0(R3)
+    190    00E128              */        
+    191    00E128              loop:
+    192    00E128 FF3F                 jmp loop
+    193    00E12A                      
+    194    00E12A                      END
+##############################
+#          CRC:AC68          #
+#        Errors:   0         #
+#        Warnings: 0         #
+#         Bytes: 300         #
+##############################
+
+
+
+

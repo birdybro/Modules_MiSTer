@@ -1,0 +1,188 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\PDP8L\simulation\modelsim
+Ecpux8
+Z1 w1318276035
+Z2 DPx4 ieee 18 std_logic_unsigned 0 22 hEMVMlaNCR^<OOoVNV;m90
+Z3 DPx4 ieee 15 std_logic_arith 0 22 GJbAT?7@hRQU9IQ702DT]2
+Z4 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z5 dC:\PDP8L\simulation\modelsim
+Z6 8c:/PDP8L/Cpu.vhd
+Z7 Fc:/PDP8L/Cpu.vhd
+l0
+L30
+VWIL>2`<3VOU9mM5S>^]OQ0
+Z8 OV;C;6.6d;45
+31
+Z9 o-93 -work work -O0
+Z10 tExplicit 1
+!s100 _dhLcEb3inUoLO2zZ[0HT0
+Abehavioral
+R2
+R3
+R4
+DEx4 work 5 cpux8 0 22 WIL>2`<3VOU9mM5S>^]OQ0
+l109
+L50
+V<@mSK`:N9?k9_W5MmHbWk2
+R8
+31
+Z11 Mx3 4 ieee 14 std_logic_1164
+Mx2 4 ieee 15 std_logic_arith
+Mx1 4 ieee 18 std_logic_unsigned
+R9
+R10
+!s100 [ERS6kDREJh64:M`Ki18X1
+Edf32
+Z12 w1314547401
+R4
+R5
+Z13 8c:/PDP8L/DF32.vhd
+Z14 Fc:/PDP8L/DF32.vhd
+l0
+L42
+V=J][JcS3bJB4B9=C`9T7F0
+R8
+31
+R9
+R10
+!s100 c;JLg0Ae?miH>Y]V;5CUa2
+Asyn
+R4
+DEx4 work 4 df32 0 22 =J][JcS3bJB4B9=C`9T7F0
+l87
+L54
+VJ:K@d9XK<YC6biiToWncI1
+R8
+31
+Z15 Mx1 4 ieee 14 std_logic_1164
+R9
+R10
+!s100 5:R7[@7laiZN46C>>FMQ:2
+Edivider
+Z16 w1339349494
+R3
+R2
+R4
+R5
+Z17 8c:/PDP8L/Divider.vhd
+Z18 Fc:/PDP8L/Divider.vhd
+l0
+L11
+VcH@=<15B5[4CBJhSD9GGm1
+R8
+31
+R9
+R10
+!s100 E0E5=koz4ZNIc>6eR7P=T3
+Artl
+R3
+R2
+R4
+DEx4 work 7 divider 0 22 cH@=<15B5[4CBJhSD9GGm1
+l29
+L19
+V]HjjiC_kSNQOo?lGX>26D2
+R8
+31
+R11
+Z19 Mx2 4 ieee 18 std_logic_unsigned
+Z20 Mx1 4 ieee 15 std_logic_arith
+R9
+R10
+!s100 4=Hoc2Vi<X9VloFi;OK713
+Emegaram
+Z21 w1314998787
+R4
+R5
+Z22 8c:/PDP8L/MegaRam.vhd
+Z23 Fc:/PDP8L/MegaRam.vhd
+l0
+L42
+VWX9JGLZAQQX6DCIz`HW[V1
+R8
+31
+R9
+R10
+!s100 BzLGTLdXKV4k[k:jf3@_40
+Asyn
+R4
+DEx4 work 7 megaram 0 22 WX9JGLZAQQX6DCIz`HW[V1
+l87
+L54
+V]7EKXNFJNobnUMJ@Xc4WF3
+R8
+31
+R15
+R9
+R10
+!s100 cLK5jV5OJnZfR80<aZ94J1
+Epdp8l
+Z24 w1369600696
+Z25 DPx3 std 6 textio 0 22 m2KQDRRhmF833<<DjYdL70
+R2
+R3
+R4
+R5
+Z26 8c:/PDP8L/Top.vhd
+Z27 Fc:/PDP8L/Top.vhd
+l0
+L16
+VXP9l5N7?NDN2iA^^Kli;52
+R8
+31
+R9
+R10
+!s100 `;ck]oQ:=;__YM7;P2YJN3
+Aonly
+R25
+R2
+R3
+R4
+DEx4 work 5 pdp8l 0 22 XP9l5N7?NDN2iA^^Kli;52
+l123
+L31
+VCdDoe^:L=:4Hc3j9O6UEz3
+R8
+31
+Mx4 4 ieee 14 std_logic_1164
+Mx3 4 ieee 15 std_logic_arith
+R19
+Z28 Mx1 3 std 6 textio
+R9
+R10
+!s100 66eeoY>j?^8i`5jQ4cL9:1
+Euart
+Z29 w1315254643
+R3
+R2
+R4
+R5
+Z30 8c:/PDP8L/uart.vhd
+Z31 Fc:/PDP8L/uart.vhd
+l0
+L12
+VCjnce=15;hKBAFf56IQ^J0
+!s100 >S@<]BNFlQaRzR=G;EnCW1
+R8
+31
+R9
+R10
+Artl
+R3
+R2
+R4
+DEx4 work 4 uart 0 22 Cjnce=15;hKBAFf56IQ^J0
+l41
+L27
+VoCUdhQEk7_<h>8@h0kV9Z2
+!s100 DBdLkXe?OXjUS39<F0V7h1
+R8
+31
+R11
+R19
+R20
+R9
+R10

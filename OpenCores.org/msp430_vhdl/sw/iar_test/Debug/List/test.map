@@ -1,0 +1,120 @@
+################################################################################
+#                                                                              #
+#      IAR Universal Linker V4.61O/W32                                         #
+#                                                                              #
+#           Link time     =  04/Mar/2010  19:01:32                             #
+#           Target CPU    =  MSP430                                            #
+#           List file     =  D:\projects\cpu\sw\iar_test\Debug\List\test.map   #
+#           Output file 1 =  D:\projects\cpu\sw\iar_test\Debug\Exe\test.a43    #
+#                            Format: intel-extended, variant: -Y1              #
+#           Command line  =  D:\projects\cpu\sw\iar_test\Debug\Obj\asm.r43     #
+#                            -o                                                #
+#                            D:\projects\cpu\sw\iar_test\Debug\Exe\test.a43    #
+#                            -Fintel-extended -Y1 -l                           #
+#                            D:\projects\cpu\sw\iar_test\Debug\List\test.map   #
+#                            -xms -IC:\Applications\iar_msp430\430\LIB\ -f     #
+#                            C:\Applications\iar_msp430\430\CONFIG\lnk430F149. #
+#                            xcl                                               #
+#                            (-cmsp430                                         #
+#                            -Z(DATA)DATA16_I,DATA16_Z,DATA16_N,DATA16_HEAP+_D #
+#                            ATA16_HEAP_SIZE=0200-09FF                         #
+#                            -Z(DATA)CSTACK+_STACK_SIZE#                       #
+#                            -Z(CODE)INFO=1000-10FF -Z(CODE)INFOA=1080-10FF    #
+#                            -Z(CODE)INFOB=1000-107F                           #
+#                            -Z(CONST)DATA16_C,DATA16_ID,DIFUNCT,CHECKSUM=1100 #
+#                            -FFDF                                             #
+#                            -Z(CODE)CSTART,ISR_CODE=1100-FFDF                 #
+#                            -P(CODE)CODE=1100-FFDF -Z(CODE)INTVEC=FFE0-FFFF   #
+#                            -Z(CODE)RESET=FFFE-FFFF) -f                       #
+#                            C:\Applications\iar_msp430\430\config\multiplier. #
+#                            xcl                                               #
+#                            (-e?Mul8Hw=?Mul8 -e?Mul16Hw=?Mul16                #
+#                            -e?Mul16to32uHw=?Mul16to32u                       #
+#                            -e?Mul16to32sHw=?Mul16to32s -e?Mul32Hw=?Mul32     #
+#                            -e_Mul64iHw=_Mul64i                               #
+#                            -e_Mul32u32uto64iHw=_Mul32u32uto64i               #
+#                            -e?Mul32fHw=_Mul32f -e_Mul64fHwPtr=_Mul64fPtr)    #
+#                            -D_STACK_SIZE=50 -D_DATA16_HEAP_SIZE=50           #
+#                            -D_DATA20_HEAP_SIZE=50                            #
+#                                                                              #
+#                           Copyright (C) 1987-2009 IAR Systems AB.            #
+################################################################################
+
+
+
+
+
+                ****************************************
+                *                                      *
+                *           CROSS REFERENCE            *
+                *                                      *
+                ****************************************
+
+                  There are no program entries.
+
+
+
+
+                ****************************************
+                *                                      *
+                *              MODULE MAP              *
+                *                                      *
+                ****************************************
+
+
+  DEFINED ABSOLUTE ENTRIES
+    *************************************************************************
+
+  DEFINED ABSOLUTE ENTRIES
+  PROGRAM MODULE, NAME : ?ABS_ENTRY_MOD
+
+Absolute parts
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _DATA20_HEAP_SIZE       0050 
+           _DATA16_HEAP_SIZE       0050 
+           _STACK_SIZE             0050 
+    *************************************************************************
+
+  FILE NAME : D:\projects\cpu\sw\iar_test\Debug\Obj\asm.r43
+  PROGRAM MODULE, NAME : main
+
+Absolute parts
+     E000 - E129
+     FFFE - FFFF
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           main                    E000 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           __MSP430F1471__         0000 
+           init                    E000 
+           loop2                   E00E 
+           loop1                   E048 
+           loop                    E128 
+
+
+
+                ****************************************
+                *                                      *
+                *      SEGMENTS IN ADDRESS ORDER       *
+                *                                      *
+                ****************************************
+
+
+SEGMENT              SPACE    START ADDRESS   END ADDRESS     SIZE  TYPE  ALIGN
+=======              =====    =============   ===========     ====  ====  =====
+                                       E000 - E129             12A  aseg  
+                                       FFFE - FFFF               2  aseg  
+
+                ****************************************
+                *                                      *
+                *        END OF CROSS REFERENCE        *
+                *                                      *
+                ****************************************
+
+ 0 bytes of CODE memory (+ 300 absolute )
+
+Errors: none
+Warnings: none
+

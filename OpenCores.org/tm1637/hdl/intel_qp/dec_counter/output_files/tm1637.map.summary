@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sat Mar 13 16:23:53 2021
+Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Revision Name : tm1637
+Top-level Entity Name : tm1637_toplevel
+Family : Cyclone IV E
+Total logic elements : 364
+    Total combinational functions : 332
+    Dedicated logic registers : 97
+Total registers : 97
+Total pins : 3
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

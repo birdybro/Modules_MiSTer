@@ -1,0 +1,106 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : -0.068 ns
+From           : rst
+To             : rst1
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 6.020 ns
+From           : vga:vga_1|s_green
+To             : vga_green
+From Clock     : clk
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 0.298 ns
+From           : rst
+To             : rst1
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'pll:pll_1|altpll:altpll_component|_clk0'
+Slack          : 12.360 ns
+Required Time  : 50.00 MHz ( period = 20.000 ns )
+Actual Time    : 130.89 MHz ( period = 7.640 ns )
+From           : vga:vga_1|s_hsync_cnt[6]
+To             : vga:vga_1|s_blue
+From Clock     : pll:pll_1|altpll:altpll_component|_clk0
+To Clock       : pll:pll_1|altpll:altpll_component|_clk0
+Failed Paths   : 0
+
+Type           : Clock Setup: 'pll:pll_1|altpll:altpll_component|_clk1'
+Slack          : 12.507 ns
+Required Time  : 25.00 MHz ( period = 40.000 ns )
+Actual Time    : 36.37 MHz ( period = 27.493 ns )
+From           : ram:ram_1|rom_4096x16:ram_l|altsyncram:altsyncram_component|altsyncram_e581:auto_generated|ram_block1a1~porta_address_reg11
+To             : cpu:cpu_1|r[9][15]
+From Clock     : pll:pll_1|altpll:altpll_component|_clk1
+To Clock       : pll:pll_1|altpll:altpll_component|_clk1
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk'
+Slack          : 30.508 ns
+Required Time  : 32.00 MHz ( period = 31.250 ns )
+Actual Time    : Restricted to 420.17 MHz ( period = 2.380 ns )
+From           : rst1
+To             : rst2
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Clock Hold: 'pll:pll_1|altpll:altpll_component|_clk0'
+Slack          : 0.391 ns
+Required Time  : 50.00 MHz ( period = 20.000 ns )
+Actual Time    : N/A
+From           : vga:vga_1|s_hsync
+To             : vga:vga_1|s_hsync
+From Clock     : pll:pll_1|altpll:altpll_component|_clk0
+To Clock       : pll:pll_1|altpll:altpll_component|_clk0
+Failed Paths   : 0
+
+Type           : Clock Hold: 'pll:pll_1|altpll:altpll_component|_clk1'
+Slack          : 0.391 ns
+Required Time  : 25.00 MHz ( period = 40.000 ns )
+Actual Time    : N/A
+From           : cpu:cpu_1|sp[0]
+To             : cpu:cpu_1|sp[0]
+From Clock     : pll:pll_1|altpll:altpll_component|_clk1
+To Clock       : pll:pll_1|altpll:altpll_component|_clk1
+Failed Paths   : 0
+
+Type           : Clock Hold: 'clk'
+Slack          : 0.512 ns
+Required Time  : 32.00 MHz ( period = 31.250 ns )
+Actual Time    : N/A
+From           : rst1
+To             : rst2
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

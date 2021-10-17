@@ -1,0 +1,30 @@
+# Project: hex2mif
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = src/hex2mif.o $(RES)
+LINKOBJ  = src/hex2mif.o $(RES)
+LIBS =  -L"C:/Applications/Dev-Cpp/lib"  
+INCS =  -I"C:/Applications/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Applications/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Applications/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Applications/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Applications/Dev-Cpp/include/c++/3.4.2"  -I"C:/Applications/Dev-Cpp/include" 
+BIN  = hex2mif.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before hex2mif.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o "hex2mif.exe" $(LIBS)
+
+src/hex2mif.o: src/hex2mif.c
+	$(CC) -c src/hex2mif.c -o src/hex2mif.o $(CFLAGS)

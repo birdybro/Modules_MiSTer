@@ -1,0 +1,9 @@
+[package]
+name = "glscope"
+version = "0.1.0"
+authors = ["Yann Vernier <yann@vernier.se>"]
+
+[dependencies]
+glium = "0.16.0"
+rand = "0.3"
+time = "0.1"

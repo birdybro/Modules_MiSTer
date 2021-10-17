@@ -1,0 +1,148 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/mongoq/projects/fpga/tm1637-opencores/tm1637-gama/testing-17.2.21/tm1637-decimal-counter-testing/simulation/modelsim
+Etm1637_decimal_count
+Z1 w1614191796
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 2
+R0
+Z5 8/home/mongoq/projects/fpga/tm1637-opencores/tm1637-gama/testing-17.2.21/tm1637-decimal-counter-testing/tm1637_decimal_count.vhd
+Z6 F/home/mongoq/projects/fpga/tm1637-opencores/tm1637-gama/testing-17.2.21/tm1637-decimal-counter-testing/tm1637_decimal_count.vhd
+l0
+L9 1
+V0W=?U[]J0T5CQV2dgQYVL3
+!s100 QogGUD[fgcFmAn[JXP6MG3
+Z7 OV;C;2020.1;71
+31
+Z8 !s110 1614193668
+!i10b 1
+Z9 !s108 1614193668.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|/home/mongoq/projects/fpga/tm1637-opencores/tm1637-gama/testing-17.2.21/tm1637-decimal-counter-testing/tm1637_decimal_count.vhd|
+!s107 /home/mongoq/projects/fpga/tm1637-opencores/tm1637-gama/testing-17.2.21/tm1637-decimal-counter-testing/tm1637_decimal_count.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Abehavioral
+R2
+R3
+R4
+DEx4 work 20 tm1637_decimal_count 0 22 0W=?U[]J0T5CQV2dgQYVL3
+!i122 2
+l19
+L15 71
+V]1]6MM03JfQIcn3M3@?`V0
+!s100 Ojj`OmMFN[RM5]I8[i4nT1
+R7
+31
+R8
+!i10b 1
+R9
+R10
+Z13 !s107 /home/mongoq/projects/fpga/tm1637-opencores/tm1637-gama/testing-17.2.21/tm1637-decimal-counter-testing/tm1637_decimal_count.vhd|
+!i113 1
+R11
+R12
+Etm1637_external_connect
+Z14 w1614193064
+Z15 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z16 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+R2
+R3
+R4
+!i122 0
+R0
+Z17 8/home/mongoq/projects/fpga/tm1637-opencores/tm1637-gama/testing-17.2.21/tm1637-decimal-counter-testing/tm1637_external_connect.vhd
+Z18 F/home/mongoq/projects/fpga/tm1637-opencores/tm1637-gama/testing-17.2.21/tm1637-decimal-counter-testing/tm1637_external_connect.vhd
+l0
+Z19 L12 1
+VNibc=lTY8k:kOZLe4OHXb0
+!s100 :LmWJVA`7>[njZlz3`mbb2
+R7
+31
+Z20 !s110 1614193667
+!i10b 1
+Z21 !s108 1614193667.000000
+Z22 !s90 -reportprogress|300|-93|-work|work|/home/mongoq/projects/fpga/tm1637-opencores/tm1637-gama/testing-17.2.21/tm1637-decimal-counter-testing/tm1637_external_connect.vhd|
+Z23 !s107 /home/mongoq/projects/fpga/tm1637-opencores/tm1637-gama/testing-17.2.21/tm1637-decimal-counter-testing/tm1637_external_connect.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R15
+R16
+R2
+R3
+R4
+DEx4 work 23 tm1637_external_connect 0 22 Nibc=lTY8k:kOZLe4OHXb0
+!i122 0
+l97
+L23 311
+Vb]XM[l9C=oaU@YLkYHGab3
+!s100 fUF50WL3]i1E<[bhYTC8U1
+R7
+31
+R20
+!i10b 1
+R21
+R22
+R23
+!i113 1
+R11
+R12
+Etm1637_toplevel
+Z24 w1614193046
+R15
+R16
+R2
+R3
+R4
+!i122 1
+R0
+Z25 8/home/mongoq/projects/fpga/tm1637-opencores/tm1637-gama/testing-17.2.21/tm1637-decimal-counter-testing/tm1637_toplevel.vhd
+Z26 F/home/mongoq/projects/fpga/tm1637-opencores/tm1637-gama/testing-17.2.21/tm1637-decimal-counter-testing/tm1637_toplevel.vhd
+l0
+R19
+VhC0UW3jQWYLn9ck3]hTdb0
+!s100 10QO]=f^QQWV;[Q=KWSfz1
+R7
+31
+R8
+!i10b 1
+R9
+Z27 !s90 -reportprogress|300|-93|-work|work|/home/mongoq/projects/fpga/tm1637-opencores/tm1637-gama/testing-17.2.21/tm1637-decimal-counter-testing/tm1637_toplevel.vhd|
+Z28 !s107 /home/mongoq/projects/fpga/tm1637-opencores/tm1637-gama/testing-17.2.21/tm1637-decimal-counter-testing/tm1637_toplevel.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R15
+R16
+R2
+R3
+R4
+DEx4 work 15 tm1637_toplevel 0 22 hC0UW3jQWYLn9ck3]hTdb0
+!i122 1
+l54
+L21 89
+VDTR5e:PAW1m7V=7<9NgCa2
+!s100 QUg[BcSkKYnUVNg0]JmFb3
+R7
+31
+R8
+!i10b 1
+R9
+R27
+R28
+!i113 1
+R11
+R12
