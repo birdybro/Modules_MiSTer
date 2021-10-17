@@ -1,0 +1,92 @@
+
+boot.bin:     file format elf64-sparc
+
+Disassembly of section .text:
+
+0000000000000000 <itlb_init_loop-0xb0>:
+   0:	01 00 00 00 	nop 
+   4:	01 00 00 00 	nop 
+   8:	01 00 00 00 	nop 
+   c:	01 00 00 00 	nop 
+  10:	01 00 00 00 	nop 
+  14:	01 00 00 00 	nop 
+  18:	01 00 00 00 	nop 
+  1c:	01 00 00 00 	nop 
+  20:	93 90 00 00 	wrpr  %g0, %cwp
+  24:	95 90 20 06 	wrpr  6, %cansave
+  28:	97 90 00 00 	wrpr  %g0, %canrestore
+  2c:	9b 90 00 00 	wrpr  %g0, %otherwin
+  30:	99 90 20 07 	wrpr  7, %cleanwin
+  34:	9d 90 20 07 	wrpr  7, %wstate
+  38:	a2 00 20 01 	add  %g0, 1, %l1
+  3c:	92 00 20 01 	add  %g0, 1, %o1
+  40:	b2 00 20 01 	add  %g0, 1, %i1
+  44:	a4 04 60 01 	add  %l1, 1, %l2
+  48:	94 02 60 01 	add  %o1, 1, %o2
+  4c:	b4 06 60 01 	add  %i1, 1, %i2
+  50:	a6 04 a0 01 	add  %l2, 1, %l3
+  54:	96 02 a0 01 	add  %o2, 1, %o3
+  58:	b6 06 a0 01 	add  %i2, 1, %i3
+  5c:	01 00 00 00 	nop 
+  60:	01 00 00 00 	nop 
+  64:	01 00 00 00 	nop 
+  68:	01 00 00 00 	nop 
+  6c:	a2 10 00 00 	mov  %g0, %l1
+  70:	82 10 20 10 	mov  0x10, %g1
+  74:	e2 f0 48 40 	stxa  %l1, [ %g1 ] (66)
+  78:	a3 48 00 00 	rdhpr  %hpstate, %l1
+  7c:	81 9c 68 20 	wrhpr  %l1, 0x820, %hpstate
+  80:	82 10 20 18 	mov  0x18, %g1
+  84:	c0 f0 0a 01 	stxa  %g0, [ %g0 + %g1 ] (80)
+  88:	c0 f0 0b 01 	stxa  %g0, [ %g0 + %g1 ] (88)
+  8c:	a2 10 20 03 	mov  3, %l1
+  90:	e2 f0 09 60 	stxa  %l1, [ %g0 ] (75)
+  94:	82 10 20 01 	mov  1, %g1
+  98:	a3 28 70 12 	sllx  %g1, 0x12, %l1
+  9c:	83 28 70 0f 	sllx  %g1, 0xf, %g1
+  a0:	a2 14 40 01 	or  %l1, %g1, %l1
+  a4:	8b 9c 40 00 	wrhpr  %l1, %htba
+  a8:	82 10 20 30 	mov  0x30, %g1
+  ac:	84 10 00 00 	mov  %g0, %g2
+
+00000000000000b0 <itlb_init_loop>:
+  b0:	c0 f0 4a 00 	stxa  %g0, [ %g1 ] (80)
+  b4:	c0 f0 8a a0 	stxa  %g0, [ %g2 ] (85)
+  b8:	84 00 a0 08 	add  %g2, 8, %g2
+  bc:	80 a0 a2 00 	cmp  %g2, 0x200
+  c0:	12 bf ff fc 	bne  b0 <itlb_init_loop>
+  c4:	01 00 00 00 	nop 
+  c8:	82 10 20 30 	mov  0x30, %g1	! 30 <itlb_init_loop-0x80>
+  cc:	84 10 00 00 	mov  %g0, %g2
+
+00000000000000d0 <dtlb_init_loop>:
+  d0:	c0 f0 4b 00 	stxa  %g0, [ %g1 ] (88)
+  d4:	c0 f0 8b a0 	stxa  %g0, [ %g2 ] (93)
+  d8:	84 00 a0 08 	add  %g2, 8, %g2
+  dc:	80 a0 a2 00 	cmp  %g2, 0x200
+  e0:	12 bf ff fc 	bne  d0 <dtlb_init_loop>
+  e4:	01 00 00 00 	nop 
+  e8:	c0 f0 0c 00 	stxa  %g0, [ %g0 ] (96)
+  ec:	82 10 20 08 	mov  8, %g1
+  f0:	c0 f0 0c 01 	stxa  %g0, [ %g0 + %g1 ] (96)
+  f4:	a2 10 20 08 	mov  8, %l1
+  f8:	c0 f4 44 20 	stxa  %g0, [ %l1 ] (33)
+  fc:	a2 10 20 10 	mov  0x10, %l1
+ 100:	c0 f4 44 20 	stxa  %g0, [ %l1 ] (33)
+ 104:	a2 10 20 0c 	mov  0xc, %l1
+ 108:	e2 f0 08 a0 	stxa  %l1, [ %g0 ] (69)
+ 10c:	03 00 00 00 	sethi  %hi(0), %g1
+ 110:	05 00 01 00 	sethi  %hi(0x40000), %g2
+ 114:	82 10 00 01 	mov  %g1, %g1
+ 118:	84 10 00 02 	mov  %g2, %g2
+ 11c:	83 28 70 20 	sllx  %g1, 0x20, %g1
+ 120:	84 10 80 01 	or  %g2, %g1, %g2
+ 124:	87 48 00 00 	rdhpr  %hpstate, %g3
+ 128:	8f 90 20 01 	wrpr  1, %tl
+ 12c:	a2 10 20 00 	clr  %l1
+ 130:	83 98 c0 00 	wrhpr  %g3, %htstate
+ 134:	8f 90 20 00 	wrpr  0, %tl
+ 138:	90 10 20 00 	clr  %o0
+ 13c:	81 c0 80 00 	jmp  %g2
+ 140:	01 00 00 00 	nop 
+ 144:	01 00 00 00 	nop 

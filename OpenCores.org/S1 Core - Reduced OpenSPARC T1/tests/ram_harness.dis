@@ -1,0 +1,26 @@
+
+hello.bin:     file format elf64-sparc
+
+Disassembly of section .text:
+
+0000000000040000 <main>:
+   40000:	9d e3 bf 30 	save  %sp, -208, %sp
+   40004:	82 10 23 2b 	mov  0x32b, %g1
+   40008:	83 28 70 06 	sllx  %g1, 6, %g1
+   4000c:	c2 77 a7 e7 	stx  %g1, [ %fp + 0x7e7 ]
+   40010:	c4 5f a7 e7 	ldx  [ %fp + 0x7e7 ], %g2
+   40014:	03 30 68 30 	sethi  %hi(0xc1a0c000), %g1
+   40018:	82 10 61 a0 	or  %g1, 0x1a0, %g1	! c1a0c1a0 <main+0xc19cc1a0>
+   4001c:	c2 70 80 00 	stx  %g1, [ %g2 ]
+   40020:	82 10 23 2b 	mov  0x32b, %g1
+   40024:	83 28 70 06 	sllx  %g1, 6, %g1
+   40028:	c2 77 a7 e7 	stx  %g1, [ %fp + 0x7e7 ]
+   4002c:	c4 5f a7 e7 	ldx  [ %fp + 0x7e7 ], %g2
+   40030:	03 3e ae 84 	sethi  %hi(0xfaba1000), %g1
+   40034:	82 10 62 10 	or  %g1, 0x210, %g1	! faba1210 <main+0xfab61210>
+   40038:	c2 70 80 00 	stx  %g1, [ %g2 ]
+   4003c:	82 10 20 00 	clr  %g1
+   40040:	83 38 60 00 	sra  %g1, 0, %g1
+   40044:	b0 10 00 01 	mov  %g1, %i0
+   40048:	81 cf e0 08 	rett  %i7 + 8
+   4004c:	01 00 00 00 	nop 

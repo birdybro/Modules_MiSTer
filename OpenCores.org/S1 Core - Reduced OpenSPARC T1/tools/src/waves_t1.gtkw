@@ -1,0 +1,31 @@
+[*]
+[*] GTKWave Analyzer v3.3.66 (w)1999-2015 BSI
+[*] Sun Nov 22 17:04:48 2015
+[*]
+[dumpfile] "/home/ubuntu/Work/SVN/s1_core/trunk/tools/traces/v9_allinst:model_core1:core1_mini:0/trace.vcd"
+[dumpfile_mtime] "Mon May  1 14:33:41 2006"
+[dumpfile_size] 20236723
+[savefile] "/home/ubuntu/Work/SVN/s1_core/trunk/tools/opt/tracan/waves.gtkw"
+[timestart] 1984200
+[size] 1855 1151
+[pos] -1 -1
+*-14.287723 2025079 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] cmp_top.
+[treeopen] cmp_top.iop.
+[sst_width] 223
+[signals_width] 527
+[sst_expanded] 1
+[sst_vpaned_height] 354
+@23
+cmp_top.iop.sparc0.spc_pcx_req_pq[4:0]
+@28
+cmp_top.iop.sparc0.spc_pcx_atom_pq
+@22
+cmp_top.iop.sparc0.spc_pcx_data_pa[123:0]
+cmp_top.iop.sparc0.pcx_spc_grant_px[4:0]
+@28
+cmp_top.iop.sparc0.cpx_spc_data_rdy_cx2
+@22
+cmp_top.iop.sparc0.cpx_spc_data_cx2[144:0]
+[pattern_trace] 1
+[pattern_trace] 0

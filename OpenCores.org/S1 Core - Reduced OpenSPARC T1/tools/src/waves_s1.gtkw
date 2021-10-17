@@ -1,0 +1,31 @@
+[*]
+[*] GTKWave Analyzer v3.3.66 (w)1999-2015 BSI
+[*] Mon Nov 30 21:49:20 2015
+[*]
+[dumpfile] "/home/ubuntu/Work/SVN/s1_core/trunk/run/sim/icarus/trace.vcd"
+[dumpfile_mtime] "Mon Nov 30 21:48:09 2015"
+[dumpfile_size] 9925089
+[savefile] "/home/ubuntu/Work/SVN/s1_core/trunk/tools/src/waves_s1.gtkw"
+[timestart] 0
+[size] 1855 1151
+[pos] -1 -1
+*-21.545673 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] testbench.
+[treeopen] testbench.s1_top_0.
+[sst_width] 223
+[signals_width] 529
+[sst_expanded] 1
+[sst_vpaned_height] 354
+@23
+testbench.s1_top_0.spc_pcx_req_pq[4:0]
+@28
+testbench.s1_top_0.spc_pcx_atom_pq
+@22
+testbench.s1_top_0.spc_pcx_data_pa[123:0]
+testbench.s1_top_0.pcx_spc_grant_px[4:0]
+@28
+testbench.s1_top_0.cpx_spc_data_rdy_cx2
+@22
+testbench.s1_top_0.cpx_spc_data_cx2[144:0]
+[pattern_trace] 1
+[pattern_trace] 0

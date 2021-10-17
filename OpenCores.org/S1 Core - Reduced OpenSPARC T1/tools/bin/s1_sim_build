@@ -1,0 +1,28 @@
+#!/bin/bash
+
+simulator=$1
+if ! [ "$simulator" == "icarus" ] && ! [ "$simulator" == "vcs" ]; then
+  echo "Usage: $0 {icarus|vcs}"
+  exit 1
+fi
+
+test_var S1_ROOT
+
+echo -e "Building design and testbench using $simulator"
+mkdir -p $S1_ROOT/run/sim/$simulator
+cd $S1_ROOT/run/sim/$simulator
+rm -rf *
+
+if [ "$simulator" == "icarus" ]; then
+  iverilog -D CMP_CLK_PERIOD=1 -g2012 -o testbench -c$FILELIST_ICARUS
+fi
+
+if [ "$simulator" == "vcs" ]; then
+  vcs +cli -line -timescale=1ns/100ps -f $FILELIST_VCS
+  mv -f simv testbench
+  mv -f simv.daidir testbench.daidir
+fi
+
+echo -e "Build with $simulator done!"
+
+

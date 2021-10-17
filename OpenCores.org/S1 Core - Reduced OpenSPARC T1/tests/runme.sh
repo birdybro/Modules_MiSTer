@@ -1,0 +1,16 @@
+opcode2disass.sh 0x01000000
+opcode2disass.sh 0x01000000
+opcode2disass.sh 0x01000000
+opcode2disass.sh 0x01000000
+opcode2disass.sh 0x01000000
+opcode2disass.sh 0x01000000
+opcode2disass.sh 0x01000000
+opcode2disass.sh 0x01000000
+opcode2disass.sh 0x03000000
+opcode2disass.sh 0x05000100
+opcode2disass.sh 0x82106000
+opcode2disass.sh 0x8410A0C0
+opcode2disass.sh 0x83287020
+opcode2disass.sh 0x84108001
+opcode2disass.sh 0x81C08000
+opcode2disass.sh 0x01000000
